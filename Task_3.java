@@ -31,10 +31,8 @@ public class Task_3 {
         }
         List<Integer> intersection = new ArrayList<>();
         for (Integer item : nums2) {
-            if (map.containsKey(item)) {
-                if (map.get(item) > 0) {
-                    intersection.add(item);
-                }
+            if (map.containsKey(item) && map.get(item) > 0) {
+                intersection.add(item);
                 map.put(item, map.get(item) - 1);
             }
         }
